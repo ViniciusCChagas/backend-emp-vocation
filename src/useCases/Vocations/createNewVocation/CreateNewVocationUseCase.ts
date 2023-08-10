@@ -18,7 +18,14 @@ class CreateNewVocationUseCase {
 	}
 
 	async execute(params: IParamsCreateNewVocationDto) {
-		const { employeeId, initialDate, finalDate } = params;
+		const {
+			employeeId,
+			initialDate: auxInitialDate,
+			finalDate: auxFinalDate,
+		} = params;
+
+		const initialDate = getInitialDate(auxInitialDate);
+		const finalDate = getFinalDate(auxFinalDate);
 
 		const employee = await this.employeesRepository.getEmployeeById(employeeId);
 

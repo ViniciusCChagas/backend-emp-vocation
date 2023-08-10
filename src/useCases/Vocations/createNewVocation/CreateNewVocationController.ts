@@ -28,8 +28,8 @@ class CreateNewVocationController {
 
 			const newVocation = await this.createNewVocationUseCase.execute({
 				employeeId,
-				initialDate: new Date(initialDate),
-				finalDate: new Date(finalDate),
+				initialDate: new Date(initialDate + ' 00:00:00'),
+				finalDate: new Date(finalDate + ' 00:00:00'),
 			});
 
 			return response.status(200).json({

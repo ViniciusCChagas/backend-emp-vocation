@@ -24,9 +24,6 @@ class CreateNewVocationUseCase {
 			finalDate: auxFinalDate,
 		} = params;
 
-		const initialDate = getInitialDate(auxInitialDate);
-		const finalDate = getFinalDate(auxFinalDate);
-
 		const employee = await this.employeesRepository.getEmployeeById(employeeId);
 
 		if (!employee) {
@@ -43,7 +40,10 @@ class CreateNewVocationUseCase {
 			(vocation) => isPast(new Date(vocation.initialDate)) === false
 		);
 
-		const totalDaysSelected = differenceInCalendarDays(finalDate, initialDate);
+		const initialDate = getInitialDate(auxInitialDate);
+		const finalDate = getFinalDate(auxFinalDate);
+
+		const totalDaysSelected = differenceInCalendarDays(finalDate, initialDate) + 1;
 		console.log('initialDate:', initialDate);
 		console.log('finalDate:', finalDate);
 		console.log('totalDaysSelected:', totalDaysSelected);

@@ -44,6 +44,9 @@ class CreateNewVocationUseCase {
 		);
 
 		const totalDaysSelected = differenceInCalendarDays(finalDate, initialDate) + 1;
+		console.log('initialDate:', initialDate);
+		console.log('finalDate:', finalDate);
+		console.log('totalDaysSelected:', totalDaysSelected);
 
 		if (totalDaysSelected > availableVocationsDays) {
 			throw new Error(

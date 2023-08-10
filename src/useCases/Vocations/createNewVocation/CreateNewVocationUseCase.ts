@@ -43,7 +43,7 @@ class CreateNewVocationUseCase {
 			(vocation) => isPast(new Date(vocation.initialDate)) === false
 		);
 
-		const totalDaysSelected = differenceInCalendarDays(finalDate, initialDate) + 1;
+		const totalDaysSelected = differenceInCalendarDays(finalDate, initialDate);
 		console.log('initialDate:', initialDate);
 		console.log('finalDate:', finalDate);
 		console.log('totalDaysSelected:', totalDaysSelected);

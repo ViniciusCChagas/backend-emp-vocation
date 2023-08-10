@@ -18,7 +18,7 @@ O EMP-VOCATION é um software de cadastro e gerenciamento de férias dos funcion
 
 #### ATENÇÃO: Este projeto depende do seu FrontEnd para funcionar corretamente!
 
-Link do repositório do frontend: [https://github.com/ViniciusCChagas/frontend-emp-vocation](Repositório)
+Link do repositório do frontend: <a href="https://github.com/ViniciusCChagas/frontend-emp-vocation" target="_blank">Clique aqui</a>
 
 ### 1. Clonar repositório
 

@@ -40,8 +40,8 @@ class CreateNewVocationController {
 			console.log(error.message);
 
 			return response.status(400).json({
-				message: 'Parâmetro inválido',
-				errors: error.errors,
+				message: 'Erro ao criar férias',
+				errors: error.errors ?? [error.message],
 			});
 		}
 	}
